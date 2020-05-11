@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Personnel</h2>
+    <div class="list-group">
+      <button class="list-group-item"
+              *ngFor="let personnel of personnel; let i  = index"
+              (click)="onViewPersonnel(i)">
+    <h3 class="list-group-item-heading">
+      {{ personnel.prenom }} {{personnel.nom}}
+      <button class="btn btn-default pull right" (click)="onDeletePersonnel(personnel)">
+        <span class="glyphicon-minus"></span>
+      </button>
+    </h3>
+    <p class="list-group-item-text">{{personnel.numeroContact}}</p>
+    </button>
+    </div>
+    <button class="btn btn-primary" (click)="onNewPersonnel()">Nouveau Personnel</button>
+  </div>
+</div>
